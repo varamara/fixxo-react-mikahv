@@ -1,0 +1,25 @@
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+a {
+    font-size: $font-size-16;
+    font-weight: $font-weight-semi-bold;
+    text-decoration: none;
+   
+    color: #23262a;
+    
+    &:hover {
+        text-decoration: underline;
+        color: #ff7373;  
+    }
+}
+
+.border {
+    color: $color-theme;
+    text-decoration: none;
+}
+
