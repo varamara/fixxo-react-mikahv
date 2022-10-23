@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import MenuIcon from '../components/MenuIcon'
 
-const menuSection = () => {
+const MainMenuSection = () => {
+  const [showMenu, setShowMenu] = useState(false)        // C#  public bool {get; set;}
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
+
   return (
     <nav className="mainmenu">
             <NavLink className="logo" to="/" end>Fixxo.</NavLink>
-        <div className="menu-links">
+        <div className={`menu-links ${ showMenu ? "d-grid" : ""}`}>
             <NavLink className="menu-link" to="/" end>Home</NavLink>
             <NavLink className="menu-link" to="/categories" end>Categories</NavLink>
             <NavLink className="menu-link" to="/products" end>Products</NavLink>
@@ -15,12 +21,14 @@ const menuSection = () => {
 
         <div className="menu-icons">
             <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
-            <MenuIcon link="/compare" icon="fa-regular fa-code-compare" />
-            <MenuIcon quantity="3" link="/wishlist" icon="fa-regular fa-heart" />
+            <MenuIcon hideOnMobile ={true} link="/compare" icon="fa-regular fa-code-compare" />
+            <MenuIcon hideOnMobile ={true} quantity="3" link="/wishlist" icon="fa-regular fa-heart" />
             <MenuIcon quantity="1" link="/shoppingcart" icon="fa-regular fa-bag-shopping " />
+
+            <button onClick={toggleMenu} className="menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
         </div>
     </nav>
   )
 }
 
-export default menuSection
+export default MainMenuSection
