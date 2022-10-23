@@ -1,13 +1,15 @@
 .mainmenu {
-    height: 100px;
-    width: 1920px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
+    width: 390px;
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo menuicons"
+                         "menulinks menulinks";
     .logo {
-        font-size: 30px;
-        font-weight: 700;
+       grid-area: logo;
+       font-size: 40px;
+       font-weight: 700;
+       padding-left: 5px;
 
         &:hover {
             color: $color-dark-1;
@@ -16,11 +18,19 @@
     }
 
     .menu-links {
-        margin-left: 7rem;
+        grid-area: menulinks;
+        height: 100%;
+        margin: none;
+        display: grid;
+        overflow: hidden;
+       
+        
+        padding-top: 10px;
 
         .menu-link {
-            margin: 1rem;
-
+            font-size: 15px;
+            font-weight: 500;
+            margin: 15px;
         }
 
         .active {
@@ -30,7 +40,10 @@
     }
 
     .menu-icons {
+        grid-area: menuicons;
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
         .menu-icon {
             display: flex;
@@ -52,16 +65,104 @@
             }
         }
 
-        .active {
-            color: $color-white;
-            background-color: $color-dark-1;
-            text-decoration: none;
-            box-shadow: 0 0 6px 4x $color-shadow;
+        .hidden {
+            display: none; 
         }
+        
+        .active {
+            color: $color-theme;
+            text-decoration: none;
+        }
+    }
+}
 
-        span {
-            margin-left: 50px;
-            margin-bottom: 10px;
+@media (min-width: 800px) {
+
+    .mainmenu {
+        width: 1000px;
+
+        .menu-links {
+            display: flex;
+            position: absolute;
+            margin-left: 260px;
+            justify-content: center;
+        }
+        
+        .logo {
+        font-size: 45px;
+        }
+    }
+  
+}
+
+@media (min-width: 1600px) {
+    .mainmenu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100px;
+        width: 1920px;
+    
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+    
+            &:hover {
+                color: $color-dark-1;
+                text-decoration: none;
+            }
+        }
+    
+        .menu-links {
+            position: relative;
+            display: flex;
+            margin-left: 7rem;
+    
+            .menu-link {
+                margin: 1rem;
+                font-size: 1rem;
+    
+            }
+            .active {
+                color: $color-theme;
+                text-decoration: none;
+            }
+        }
+    
+        .menu-icons {
+            display: flex;
+    
+            .menu-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-white;
+                box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
+                height: 35px;
+                width: 35px;
+                margin: 0.5rem;
+                border-radius: 50%; 
+                transition: all 0.1s ease-in-out;
+    
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-dark-1;
+                    text-decoration: none;
+                    box-shadow: 0 0 6px 4x $color-shadow;
+                }
+            }
+    
+            .active {
+                color: $color-white;
+                background-color: $color-dark-1;
+                text-decoration: none;
+                box-shadow: 0 0 6px 4x $color-shadow;
+            }
+    
+            span {
+                margin-left: 50px;
+                margin-bottom: 10px;
+            }
         }
     }
 }
