@@ -2,7 +2,16 @@
     margin-bottom: 60px;
 
     .container {
-       width: 1110px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
     }
 
     .card {
@@ -94,10 +103,10 @@
 
 @media (min-width: 1200px) {
 
-    .container {
-        width: 1110px;
-        display: inline-block;
-        margin-left: 24rem;
+    .product-grid {
 
+        .container {
+            width: 1110px;
+        }
     }
 }
