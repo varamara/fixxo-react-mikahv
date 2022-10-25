@@ -1,11 +1,13 @@
 .btn-theme {
     position: relative;
-    width: 100%;
     text-align: center;
+    width: 100%;
     background-color: $color-theme;
     color: $color-white;
+    font-weight: 500;
     padding: 20px 50px;
     transition: all 0.2s ease-in-out;
+    border: none;
 
     .corner-left {
         position: absolute;
