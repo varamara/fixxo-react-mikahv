@@ -48,7 +48,7 @@
 
         .error {
             color: $color-theme;
-            border: 1px solid $color-theme;
+            border: 1px solid $color-theme!important;
         }
 
         .errorMessage {
