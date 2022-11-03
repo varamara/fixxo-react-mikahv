@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
+import ProductDetailsSection from '../sections/ProductDetailsSection'
 
 const ProductDetailsView = () => {
 
@@ -10,9 +11,7 @@ const ProductDetailsView = () => {
   return (
     <>
     <MainMenuSection />
-      <div className="container mt-5">
-        <h1>{params.name}</h1>
-      </div>
+    <ProductDetailsSection />
     <FooterSection />
     </>
   )
