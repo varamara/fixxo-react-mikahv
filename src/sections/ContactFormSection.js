@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validate } from '../assets/scripts/validation'
+import { submitData, validate } from '../assets/scripts/submit_and_validation'
 
 const ContactForm = () => {
   let currentPage = "Contact Us"
@@ -10,6 +10,7 @@ const ContactForm = () => {
   const [comments, setComments] = useState('')
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [failedSubmit, setFailedSubmit] = useState(false)
 
   const handleChange = (e) => {
     const {id, value} = e.target
@@ -29,21 +30,35 @@ const ContactForm = () => {
     setErrors({...errors, [id]: validate(e)})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setFailedSubmit(false)
+    setSubmitted(false)
+
+
     setErrors(validate(e, {name, email, comments}))
   
     if (errors.name === null && errors.email === null && errors.comments === null) {
-      setSubmitted(true)
+
+        let json = JSON.stringify({ name, email, comments})
+
       setName('')
       setEmail('')
       setComments('')
       setErrors({})
+
+      if(await submitData('https://win22-webapi.azurewebsites.net/api/contactform', 'POST', json, )) {
+        setSubmitted(true)
+        setFailedSubmit(false)
+      } else {
+        setSubmitted(false)
+        setFailedSubmit(true)
+      }
+
     } else {
       setSubmitted(false)
     }
   }
-
 
   return (
     <section className="contact-form mt-5">
@@ -51,9 +66,17 @@ const ContactForm = () => {
         
         {
           submitted ? (
-          <div className="alert alert-success text-center mb-5" role="alert">
+          <div className="alert alert-success text-center" role="alert">
             <h3>Thank you for your comment.</h3> 
-            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;We will contact you as soon as possible.</p>
+            <p>We will contact you as soon as possible.</p>
+            </div>  ) : (<></>)
+        }
+
+        {
+          failedSubmit ? (
+          <div className="alert alert-danger text-center" role="alert">
+            <h3>Something went wrong. </h3> 
+            <p>Comment has not been submitted. </p>
             </div>  ) : (<></>)
         }
         
