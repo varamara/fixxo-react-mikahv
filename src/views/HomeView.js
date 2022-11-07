@@ -3,6 +3,8 @@ import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
+import ShowcaseSection from '../sections/ShowcaseSection'
+import TopPicksSection from '../sections/TopPicksSection'
 
 const HomeView = () => {
 
@@ -27,8 +29,10 @@ const HomeView = () => {
     <>
     <MainMenuSection />
     <BreadcrumbSection currentPage="Home"/>
+    <ShowcaseSection />
     <ProductGridSection title="Featured Products" products={featuredProducts} />
     <ProductGridSection title="Top Products" products={topProducts} />
+    <TopPicksSection />
     <FooterSection />
     </>
   )
