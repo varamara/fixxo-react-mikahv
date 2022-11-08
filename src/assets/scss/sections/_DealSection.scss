@@ -1,0 +1,54 @@
+.deals-section {
+    display: flex;
+    margin-top: 6rem;
+    height: 664px;
+  
+    .flash-sale {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-gray-3;
+        margin-left: 7.4rem;
+        margin-right: 2rem;
+        height: 664px;
+        width: 825px; 
+
+        .btn-theme {
+            width: 70%;
+            background-color: $color-white;
+            color: $color-dark-1;
+            margin-left: 40px;
+            margin-top: 20px;
+
+            .corner-right {
+                border-color: $color-dark-1;
+                margin-left: -55px;
+                margin-top: 15px;
+            }
+            .corner-left {
+                border-color: $color-dark-1;
+            }
+
+            &:hover {
+                background-color: $color-dark-1;
+            }
+        }
+        h1 {
+            color: $color-white;
+            font-weight: $font-weight-extra-bold;
+        }
+
+    } 
+
+    .container {
+        border: 1px solid red;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+          ". ."
+          ". ."; 
+        width: 825px; 
+        height: 654px; 
+      }
+}

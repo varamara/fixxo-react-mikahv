@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ProductDetailsSection = () => {
+const ProductDetailsSection = ({product}) => {
   return (
-    <div>ProductDetailsSection</div>
+    <div>
+        <h1>{product.name}</h1>
+        <p>${product.price}</p>
+        <img src={product.imageName} />
+    </div>
   )
 }
 
