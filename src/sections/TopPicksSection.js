@@ -9,7 +9,7 @@ const TopPicksSection = () => {
             <img src={img1} className="image-left" alt="showcase-img-1" />
             <h1>Pamela Reif's</h1>
             <p>Top Picks</p>
-            <button className="btn-theme">
+            <button className="btn-dark">
                 <div className="corner-left"></div>
                 SHOP NOW
                 <div className="corner-right"></div>
@@ -19,7 +19,7 @@ const TopPicksSection = () => {
             <img src={img2} className="image-right" alt="showcase-img-2" />
             <h1>Let's Be</h1>
             <p>Concious</p>
-            <button className="btn-theme">
+            <button className="btn-light">
                 <div className="corner-left"></div>
                 FLASH SALE
                 <div className="corner-right"></div>

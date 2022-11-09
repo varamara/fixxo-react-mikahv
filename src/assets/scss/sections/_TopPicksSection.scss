@@ -10,29 +10,11 @@
         letter-spacing: 0.2rem;
         margin-right: -80px;
 
-        .btn-theme {
-            position: absolute;
-            height: 60px;
-            width: 180px;
+        .btn-dark {
             margin-top: 250px;
             margin-left: 420px;
-            font-size: 14px;
-            color: $color-white;
-            background-color: $color-dark-1;
-
-            .corner-right {
-                border-color: $color-white;
-                margin-top: 15px;
-                margin-left: -75px;
-            }
-            .corner-left {
-                border-color: $color-white;
-            }
-            &:hover {
-                background-color: $color-white;
-                color: $color-dark-1;
-            }
         }
+      
         h1 {
             font-size: 45px;
             font-weight: $font-weight-extra-bold;
@@ -41,6 +23,7 @@
             margin-left: 420px;
             width: 100%;
         }
+
         p {
             font-size: 45px;
             font-weight: $font-weight-extra-bold;
@@ -55,28 +38,11 @@
         color: $color-dark-1;
         letter-spacing: 0.2rem;
 
-        .btn-theme {
-            position: absolute;
-            height: 60px;
-            width: 180px;
+        .btn-light {
             margin-top: 250px;
-            margin-left: 80px;
-            font-size: 14px;
-            color: $color-dark-1;
-            background-color: $color-white;
-
-            .corner-right {
-                border-color: $color-dark-1;
-                margin-top: 15px;
-                margin-left: -75px;
-            }
-            .corner-left {
-                border-color: $color-dark-1;
-            }
-            &:hover {
-                background-color: $color-dark-1;
-            }
+            margin-left: 45px;
         }
+
         h1 {
             font-size: 45px;
             font-weight: $font-weight-extra-bold;
@@ -85,6 +51,7 @@
             margin-left: 40px;
             width: 100%;
         }
+        
         p {
             font-size: 45px;
             font-weight: $font-weight-extra-bold;

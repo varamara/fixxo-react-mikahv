@@ -26,7 +26,7 @@ const ProductCard = ({item}) => {
                 <NavLink to={`/products/${item.name.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme btn-card-theme">
                     <span className="corner-left"></span>
                     <span className="corner-right"></span>
-                    QUICK VIEW
+                    <p>QUICK VIEW</p>
                 </NavLink>
             </div>
             <div className="card-body">

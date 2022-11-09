@@ -7,24 +7,24 @@ html, body {
 }
 
 header {
-    background: $color-linear-gradient-dark;
-    background: linear-gradient(90deg, $color-linear-gradient-dark 0%, $color-linear-gradient-light 100%);
+    background: #E6E6E6;
+    background: linear-gradient(90deg, #E6E6E6 0%, #F5F5F5 100%);
 }
 
 a {
     font-size: $font-size-16;
     font-weight: $font-weight-semi-bold;
     text-decoration: none;
-    color: $color-dark-3;
+    color: #23262a;;
     
     &:hover {
         text-decoration: underline;
-        color: $color-theme;  
+        color: #ff7373;  
     }
 }
 
 .border {
-    color: $color-theme;
+    color: #ff7373;
     text-decoration: none;
 }
 

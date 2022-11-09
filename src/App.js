@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import './style.min.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import './style.min.css';
 
 import HomeView from './views/HomeView';
 import CategoriesView from './views/CategoriesView';
