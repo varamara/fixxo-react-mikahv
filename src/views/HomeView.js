@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { ProductsContext } from '../contexts/contexts'
+import { FeaturedProductsContext, dealsProductsContext, ProductsContext } from '../contexts/contexts'
 
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
@@ -11,15 +11,11 @@ import DealsSection from '../sections/DealsSection_1'
 import DealsSection_2 from '../sections/DealsSection_2'
 import SupportSection from '../sections/SupportSection'
 
-
-
-
-
 const HomeView = () => {
 
   window.top.document.title = 'Fixxo.'
 
-  const productsContext = useContext(ProductsContext);
+  const {featured, deals} = useContext(ProductsContext);
 
   return (
     <>
@@ -28,10 +24,10 @@ const HomeView = () => {
       <BreadcrumbSection currentPage="Home"/>
       <ShowcaseSection />
     </header>
-    <ProductGridSection title="Featured Products" items={productsContext.featuredProducts}/>
+    <ProductGridSection title="Featured Products" items={featured}/>
     <TopPicksSection />
-    <DealsSection items={productsContext.dealsProducts}/>
-    <DealsSection_2 items={productsContext.dealsProducts}/>
+    <DealsSection items={deals}/>
+    <DealsSection_2 items={deals}/>
     <SupportSection />
     <FooterSection />
     </>

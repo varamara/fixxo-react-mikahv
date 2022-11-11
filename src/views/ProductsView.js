@@ -10,13 +10,13 @@ const ProductsView = () => {
 
   window.top.document.title = 'Products | Fixxo.'
 
-  const productsContext = useContext(ProductsContext);
+  const {products} = useContext(ProductsContext);
 
   return (
     <>
     <MainMenuSection />
     <BreadcrumbSection currentPage="Products"/>
-    <ProductGridSection title="Products" items={productsContext.all}/>
+    <ProductGridSection title="Products" items={products}/>
     <FooterSection />
     </>
   )

@@ -12,8 +12,6 @@ const ShowcaseSection = () => {
                 <h1>SALE UP</h1>
                 <h1>To 50% Off</h1>
                 <p>Online shopping free home delivery over $100</p>
-    
-
                 <Link to="/products" className="btn-theme"><div className="corner-left"></div>SHOP NOW<div className="corner-right"></div></Link>
             </div>
             <img src={img2} className="showcase-image-right" alt="showcase-img-2" />

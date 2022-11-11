@@ -26,7 +26,6 @@ const ContactForm = () => {
         setComments(value)
         break
     }
-
     setErrors({...errors, [id]: validate(e)})
   }
 
@@ -35,12 +34,11 @@ const ContactForm = () => {
     setFailedSubmit(false)
     setSubmitted(false)
 
-
     setErrors(validate(e, {name, email, comments}))
   
     if (errors.name === null && errors.email === null && errors.comments === null) {
 
-        let json = JSON.stringify({ name, email, comments})
+      let json = JSON.stringify({ name, email, comments})
 
       setName('')
       setEmail('')

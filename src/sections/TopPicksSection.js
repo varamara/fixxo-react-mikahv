@@ -21,7 +21,7 @@ const TopPicksSection = () => {
             <p>Concious</p>
             <button className="btn-light">
                 <div className="corner-left"></div>
-                FLASH SALE
+                    FLASH SALE
                 <div className="corner-right"></div>
             </button>
         </div>

@@ -10,7 +10,7 @@ const DealsSection = ({ items = []}) => {
               <h1>2 FOR USD $29</h1>
               <button className="btn-light">
                   <div className="corner-left"></div>
-                  FLASH SALE
+                    FLASH SALE
                   <div className= "corner-right"></div>
               </button>
           </div>
@@ -25,7 +25,6 @@ const DealsSection = ({ items = []}) => {
           </div>
         </div>
       </div>
-
     </section>
   )
 }

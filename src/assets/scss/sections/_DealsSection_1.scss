@@ -10,8 +10,12 @@
         background-color: $color-gray-3;
         margin-left: 7.4rem;
         margin-right: 2rem;
-        height: 665px;
+        height: 680px;
         width: 820px; 
+
+        .flash-info {
+            margin-bottom: 50px;
+        }
 
         .btn-light {
             margin-left: 45px;
@@ -39,6 +43,10 @@
                 background-color: $color-gray-1;
                 position: relative;
 
+                p {
+                    margin-top: 13px;
+                    margin-left: 30px;
+                }
                 .card-menu {
                     position: absolute;
                     top: 10px;
@@ -85,14 +93,14 @@
                 letter-spacing: 1px;
 
                 .card-category {
-                    font-size: 13px;
-                    font-weight: 500;
+                    font-size: $font-size-13;
+                    font-weight: $font-weight-medium;
                     color: $color-gray-4;
                 }
                 
                 .card-title {
-                    font-size: 16px;
-                    font-weight: 600;
+                    font-size: $font-size-16;
+                    font-weight: $font-weight-semi-bold;
                 }
 
                 .card-rating {
@@ -100,8 +108,8 @@
                 }
                 
                 .card-price {
-                    font-size: 18px;
-                    font-weight: 600;
+                    font-size: $font-size-18;
+                    font-weight: $font-weight-semi-bold;
                 }
             }     
 

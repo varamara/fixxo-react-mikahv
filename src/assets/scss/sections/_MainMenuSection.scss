@@ -5,10 +5,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo menuicons"
                          "menulinks menulinks";
+
     .logo {
        grid-area: logo;
-       font-size: 40px;
-       font-weight: 700;
+       font-size: $font-size-40;
+       font-weight: $font-weight-bold;
        padding-left: 0.7rem;
 
         &:hover {
@@ -26,8 +27,8 @@
         padding-top: 10px;
 
         .menu-link {
-            font-size: 15px;
-            font-weight: 500;
+            font-size: $font-size-15;
+            font-weight: $font-weight-medium;
             margin: 15px;
         }
 
@@ -61,7 +62,6 @@
                 text-decoration: none;
                 box-shadow: 0 0 6px 4x $color-shadow;
             }
-
         }
 
         .hidden {
@@ -73,7 +73,6 @@
             text-decoration: none;
         }
 
-        
         .btn-menu-icon {
             border: none;
         }
@@ -95,12 +94,10 @@
         }
         
         .logo {
-        font-size: 45px;
+        font-size: $font-size-45;
         margin-left: 6.5rem;
         }
-       
     }
-  
 }
 
 @media (min-width: 1600px) {
@@ -113,8 +110,8 @@
         width: 1920px;
     
         .logo {
-            font-size: 30px;
-            font-weight: 700;
+            font-size: $font-size-30;
+            font-weight: $font-weight-bold;
     
             &:hover {
                 color: $color-dark-1;
@@ -129,9 +126,10 @@
     
             .menu-link {
                 margin: 1rem;
-                font-size: 1rem;
+                font-size: $font-size-16;
     
             }
+
             .active {
                 color: $color-theme;
                 text-decoration: none;
@@ -176,7 +174,6 @@
             .btn-menu-icon {
                 display: none;
             }
-
         }
     }
 }

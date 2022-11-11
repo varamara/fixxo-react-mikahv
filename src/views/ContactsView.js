@@ -18,7 +18,6 @@ const ContactsView = () => {
     <MapSection />
     <ContactFormSection />
     <FooterSection />
-    
     </>
   )
 }

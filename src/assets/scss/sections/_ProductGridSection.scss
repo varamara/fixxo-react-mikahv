@@ -1,28 +1,31 @@
 .product-grid {
     margin-bottom: 60px;
-
+    
     .container {
         display: block;
         align-items: center;
         justify-content: center;
 
         h1 {
-            font-size: 18px;
+            font-size: $font-size-18;
             text-align: center;
-            font-weight: 700;
-            margin-bottom: 30px;
+            font-weight: $font-weight-bold;
+            margin-bottom: 50px;
         }
     }
 
     .card {
         border: none;
-
         img,
         .card-img  {
             height: 210px;
             width: 255px;
             background-color: $color-gray-1;
             position: relative;
+
+            p {
+                margin-top: 16px;
+            }
 
             .card-menu {
                 position: absolute;
@@ -70,14 +73,14 @@
             letter-spacing: 1px;
 
             .card-category {
-                font-size: 13px;
-                font-weight: 500;
+                font-size: $font-size-13;
+                font-weight: $font-weight-medium;
                 color: $color-gray-4;
             }
             
             .card-title {
-                font-size: 16px;
-                font-weight: 600;
+                font-size: $font-size-16;
+                font-weight: $font-weight-semi-bold;
             }
 
             .card-rating {
@@ -85,8 +88,8 @@
             }
             
             .card-price {
-                font-size: 18px;
-                font-weight: 600;
+                font-size: $font-size-18;
+                font-weight: $font-weight-semi-bold;
             }
         }     
 
@@ -106,7 +109,7 @@
     .product-grid {
 
         .container {
-            width: 1110px;
+            width: 1250px;
         }
     }
 }

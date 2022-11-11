@@ -13,7 +13,7 @@
 
         li {
             display: inline-block;
-            font-weight: 500;
+            font-weight: $font-weight-medium;
 
             a{
                 color: $color-dark-1;
@@ -26,7 +26,7 @@
 
             & + li:before {
                 content: "\00a0>\00a0";
-                font-weight: 400;
+                font-weight: $font-weight-regular;
                 color: $color-dark-1;
             }
         }

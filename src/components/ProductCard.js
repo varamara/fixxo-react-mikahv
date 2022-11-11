@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({item}) => {
 
@@ -23,11 +23,11 @@ const ProductCard = ({item}) => {
                     <button onClick={addToCompare}className="menu-link"><i className="fa-regular fa-code-compare"></i></button>
                     <button onClick={addToCart}className="menu-link"><i className="fa-regular fa-bag-shopping"></i></button>
                 </div>
-                <NavLink to={`/products/${item.name.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme btn-card-theme">
+                <Link to={`/products/${item.name.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme btn-card-theme">
                     <span className="corner-left"></span>
                     <span className="corner-right"></span>
                     <p>QUICK VIEW</p>
-                </NavLink>
+                </Link>
             </div>
             <div className="card-body">
                 <p className="card-category">{item.category}</p>

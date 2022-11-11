@@ -24,7 +24,6 @@ const MainMenuSection = () => {
             <MenuIcon hideOnMobile ={true} link="/compare" icon="fa-regular fa-code-compare" />
             <MenuIcon hideOnMobile ={true} quantity="3" link="/wishlist" icon="fa-regular fa-heart" />
             <MenuIcon quantity="1" link="/shoppingcart" icon="fa-regular fa-bag-shopping " />
-
             <button onClick={toggleMenu} className="menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
         </div>
     </nav>
